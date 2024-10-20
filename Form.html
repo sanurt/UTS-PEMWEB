@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Form Saran</title>
+    <link rel="stylesheet" href="Form.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,300,0,-25&icon_names=home" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="navbar-container">
+            <ul class="navbar">
+                <li class="navbar-item">
+                    <h1>Form Saran</h1>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <i class="fa-solid fa-house"></i>
+            <a href="Home.html"> Home </a>
+          </li>
+          <li class="sidebar-item">
+              <i class="fa-solid fa-star"></i>
+            <a href="Table.html"> Pencapaian </a>
+          </li>
+          <li class="sidebar-item">
+              <i class="fa-solid fa-envelope"></i>
+            <a href="Form.html"> Saran </a>
+          </li>
+        </ul>
+      </aside>
+
+    <main>
+        <section class="form">
+            <h2>Masukkan Saran</h2>
+            <form action="submit.html" method="GET">
+                <div class="form-field">
+                    <label for="Nama">Nama:</label>
+                    <input type="text" id="Nama" name="Nama" required placeholder="M Ihsan Nur Tsaqib">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="ihsan@gmail.com">
+                </div>
+                <div class="form-field">
+                    <label for="nomor">Nomor:</label>
+                    <input type="number" id="nomor" name="nomor" required placeholder="08xxxxxxxxxx" maxlength="13">
+                </div>
+                <div class="form-field">
+                    <label for="tl">Tanggal Lahir:</label>
+                    <input type="date" id="tl" name="tl" required>
+                </div>
+                <div class="form-field">
+                    <label for="saran">Saran/Kritik:</label>
+                    <textarea id="saran" name="saran" rows="4" required></textarea>
+                  </div>
+                <button type="submit">Submit</button>
+                <button type="reset">reset</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: ihsnr01@gmail.com</p>
+    </footer>
+</body>
+</html>

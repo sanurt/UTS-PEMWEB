@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: url(Assets/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+header {
+    background-color: #328bc3;
+    padding: 15px;
+    color: white;
+    z-index: 1000;
+    text-align: center;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #eeeeee;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    width: 200px;
+    height: calc(100% - 80px);
+}
+
+.sidebar-item {
+    display: flex;
+    gap: 16px;
+}
+
+.sidebar-item a {
+    color: #328bc3ea;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Main Content */
+main {
+    margin-left: 220px; /* Adjust margin to account for sidebar */
+    padding: 20px;
+    min-height: 80vh;
+}
+
+.achievement-table {
+    margin-top: 20px;
+}
+
+.table-container {
+    max-height: 400px; /* Adjust based on preference */
+    overflow-y: auto; /* Enables scrolling */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #328bc3;
+    color: white;
+    position: sticky;
+    top: 0; /* Sticky header */
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #d1e8ff; /* Light blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #328bc3be;
+    color: white;
+
+}
+footer p{
+    text-align: center;
+  }
+
+/* Responsive Layout */
+@media (max-width: 575px) { /* XS */
+    .sidebar {
+        position: static;
+        width: 100%;
+        top: 0;
+    }
+
+    .sidebar-nav{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .sidebar-item{
+        gap: 16px;
+    }
+
+    main {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .table-container {
+        max-height: 300px; /* Adjust max height for small screens */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) { /* SM */
+    .sidebar {
+        width: 140px; /* Adjust width for tablets */
+    }
+    
+    main {
+        margin-left: 210px; /* Sidebar is full width */
+        margin-right: 50px;
+    }
+
+    .table-container {
+        max-height: 350px; /* Adjust max height for mobile landscape */
+    }
+
+    .footer {
+        margin-left: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* MD */
+    .sidebar {
+        width: 150px; /* Adjust width for tablets */
+    }
+
+    main {
+        margin-left: 250px; /* Adjust margin */
+        margin-right: 50px;
+    }
+
+    .table-container {
+        max-height: 400px; /* Adjust max height for tablet */
+    }
+}
+
+@media (min-width: 992px) { /* LG */
+    .sidebar {
+        width: 200px; /* Default width for desktop */
+    }
+
+    main {
+        margin-left: 280px; /* Default margin for desktop */
+        margin-right: 70px;
+    }
+
+    .table-container {
+        max-height: 500px; /* Adjust max height for desktop */
+    }
+}
